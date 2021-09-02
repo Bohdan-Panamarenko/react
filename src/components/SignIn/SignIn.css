@@ -1,0 +1,22 @@
+.SignIn_input {
+    display: block;
+    margin-bottom: 0.5em;
+    font-size: inherit;
+}
+
+#signin-container {
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#signin-container h1 {
+    margin-bottom: 0.5em;
+}
+
+#signin-container button {
+    font-size: inherit;
+}
