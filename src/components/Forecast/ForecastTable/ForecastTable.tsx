@@ -6,7 +6,7 @@ interface Props {
 }
 
 
-export default class FunctionTable extends Component <Props, any> {
+export default class ForecastTable extends Component <Props, any> {
 
     render() {
         const forecast = this.props.forecast;
