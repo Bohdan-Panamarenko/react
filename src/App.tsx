@@ -11,21 +11,22 @@ import {
 import { Redirect } from 'react-router';
 
 interface State {
-    user: { username: string },
-    password: { password: string }
+    username: string,
+    password: string
 }
 
-class App extends Component <any, any> {
+class App extends Component <any, State> {
     constructor(props: any) {
         super(props);
 
-        const user = localStorage.getItem('username') ?? { username: '' } ;
-        const password = localStorage.getItem('password') ?? { password: '' };
-        this.state = { user, password };
+        this.state = { 
+            username: localStorage.getItem('username') ?? '',
+            password: localStorage.getItem('password') ?? ''
+        };
     }
 
     render() {
-        const notLoggedIn = this.state.user.username === "";
+        const notLoggedIn = this.state.username === "";
         return (
         <Router>
             <Switch>

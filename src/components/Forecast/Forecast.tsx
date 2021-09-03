@@ -27,7 +27,8 @@ export default class Forecast extends Component <any, State> {
     }
 
     getForecast(city: string) {
-        let url = 'http://api.openweathermap.org/data/2.5/weather?q=' + city + '&APPID=b297fb8bc8bda17cb7f89d1be8c25e44';
+        let key = '9eaf1cb25963c5f59244fa7e03c68cc8';
+        let url = 'http://api.openweathermap.org/data/2.5/weather?q=' + city + '&APPID=' + key;
         fetch(url)
             .then(response => response.json())
             .then(response => this.setState({forecast: response}))
