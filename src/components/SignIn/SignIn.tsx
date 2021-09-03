@@ -1,40 +1,35 @@
-import { Component, SyntheticEvent } from "react";
+import { useState, SyntheticEvent } from "react";
 import './SignIn.css';
 
-export default class SignIn extends Component {
-    state = {
-        user: '',
-        password: ''
-    };
+export default function SignIn() {
+    const [user, setUser] = useState('');
+    const [password, setPassword] = useState('');
 
-    updateUser = (event: SyntheticEvent) => {
-        this.setState({user: (event.target as HTMLInputElement).value});
+    const updateUser = (event: SyntheticEvent) => {
+        setUser((event.target as HTMLInputElement).value);
     }
 
-    updatePassword = (event: SyntheticEvent) => {
-        this.setState({password: (event.target as HTMLInputElement).value})
+    const updatePassword = (event: SyntheticEvent) => {
+        setPassword((event.target as HTMLInputElement).value)
     }
 
-    handleFormSubmit = () => {
-        const { user, password } = this.state;
+    const handleFormSubmit = () => {
         localStorage.setItem('username', user);
         localStorage.setItem('password', password);
     };
 
-    render() {
-        return (
-            <div id="signin-container">
-                <h1>Sign in</h1>
-                <form id="SignIn_form" onSubmit={this.handleFormSubmit}>
-                    <label>
-                        <input className="SignIn_input" name="user" value={this.state.user} onChange={this.updateUser} placeholder="Username" />
-                    </label>
-                    <label>
-                        <input className="SignIn_input" type="password" value={this.state.password} onChange={this.updatePassword} placeholder="Password" />
-                    </label>
-                    <button type="submit">Sign in</button>
-                </form>
-            </div>
-        );
-    };
+    return (
+        <div id="signin-container">
+            <h1>Sign in</h1>
+            <form id="SignIn_form" onSubmit={handleFormSubmit}>
+                <label>
+                    <input className="SignIn_input" name="user" value={user} onChange={updateUser} placeholder="Username" />
+                </label>
+                <label>
+                    <input className="SignIn_input" type="password" value={password} onChange={updatePassword} placeholder="Password" />
+                </label>
+                <button type="submit">Sign in</button>
+            </form>
+        </div>
+    );
 }
