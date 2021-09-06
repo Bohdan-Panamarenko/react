@@ -21,12 +21,12 @@ export default class Landing extends Component<{}, State> {
 
   private hideNav = () => {
     this.setState({ navClosed: true});
-    document.querySelector('body')?.classList.remove("no-scroll");
+    document.querySelector('body')?.classList.remove('no-scroll');
   }
 
   private showHideNav = () => {
     this.setState({ navClosed: !this.state.navClosed});
-    document.querySelector('body')?.classList.toggle("no-scroll");
+    document.querySelector('body')?.classList.toggle('no-scroll');
   }
 
   render() {
