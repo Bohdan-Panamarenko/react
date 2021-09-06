@@ -9,17 +9,17 @@ header {
   height: 100px;
   max-width: 1920px; }
 
-nav {
+#landing-nav {
   position: absolute;
   top: 30px;
   right: 0; }
-  nav .content {
+  #landing-nav .content {
     display: flex; }
-    nav .content > * {
+    #landing-nav .content > * {
       margin-right: 50px; }
-    nav .content > *:last-child {
+    #landing-nav .content > *:last-child {
       margin-right: 0; }
-  nav a {
+  #landing-nav a {
     width: 160px;
     height: 40px;
     line-height: 40px;
@@ -28,7 +28,7 @@ nav {
     border-radius: 20px;
     display: block;
     text-align: center; }
-    nav a:hover {
+    #landing-nav a:hover {
       background-color: #F3F4F6; }
 
 #logo {
