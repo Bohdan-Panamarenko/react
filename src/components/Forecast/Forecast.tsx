@@ -35,16 +35,6 @@ export default class Forecast extends Component <{}, State> {
         .catch(() => { this.setState({ forecast: { cod: 404 } }); });
   };
 
-  private logout = () => {
-    localStorage.removeItem('username');
-    localStorage.removeItem('password');
-    window.location.reload();
-  }
-
-
-
-
-
   render() {
     return (
       <div id="forecast-container">
@@ -60,10 +50,6 @@ export default class Forecast extends Component <{}, State> {
 
         <div id="forecast-table-container">
           <ForecastTable forecast={this.state.forecast} />
-        </div>
-
-        <div id="logout-container">
-          <button onClick={this.logout}>Logut</button>
         </div>
 
       </div>
