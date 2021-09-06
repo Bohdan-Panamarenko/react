@@ -1,4 +1,4 @@
-import ForecastJSON from "../ForecastJSON/ForecasstJSON";
+import ForecastJSON from '../ForecastJSON/ForecasstJSON';
 
 interface Props {
     forecast: ForecastJSON

@@ -6,7 +6,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Link
-} from "react-router-dom";
+} from 'react-router-dom';
 import { Redirect } from 'react-router';
 import { PrivatRoute } from './components/Routes/PrivatRoute';
 import { PublicRoute } from './components/Routes/PublicRoute';

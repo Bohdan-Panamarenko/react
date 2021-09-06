@@ -1,4 +1,4 @@
-import { useState} from "react";
+import { useState} from 'react';
 import './css/style.css';
 import CloseMenu from './img/close-menu.svg';
 import BurgerMenu from './img/burger-menu.svg';
@@ -11,12 +11,12 @@ export default function Landing() {
 
   const hideNav = () => {
     setNavState(true);
-    document.querySelector('body')?.classList.remove("no-scroll");
+    document.querySelector('body')?.classList.remove('no-scroll');
   }
 
   const showHideNav = () => {
     setNavState(!navClosed);
-    document.querySelector('body')?.classList.toggle("no-scroll");
+    document.querySelector('body')?.classList.toggle('no-scroll');
   }
 
   return(

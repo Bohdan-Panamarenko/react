@@ -3,7 +3,7 @@ import './Forecast.css';
 import ForecastTable from './ForecastTable/ForecastTable';
 
 export default function Forecast() {
-  const [city, setCity] = useState("London");
+  const [city, setCity] = useState('London');
   const [forecast, setForecast] = useState({ cod: 200 });
   
   function getForecast(city: string) {
